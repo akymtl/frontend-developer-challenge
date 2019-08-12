@@ -1,25 +1,59 @@
-/* app css stylesheet */
-
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+header {
+  background-color: black;
+  color: white;
+  text-align: center;  
+  display: flex;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
 }
 
-.menu:before {
-  content: "[";
+.main {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
-.menu:after {
-  content: "]";
+input {
+  width: 100%;
 }
 
-.menu > li {
-  display: inline;
+.content {
+  margin: 15px;
+  flex-grow: 4;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.video {
+  width: 100%;
+  height: 450px;
+}
+
+.side-menu {
+  margin: 15px;
+  flex-grow: 1;
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+ul {
+  padding-left: 0;
+}
+
+.playlist-item {
+  display: flex;
+  cursor: pointer;
+}
+
+.song-name {
+  flex-grow: 4;
+  width: 100px;
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.delete-song {
+  float: right;
+  margin-right: 15px;
+  margin-left: 10px;
 }

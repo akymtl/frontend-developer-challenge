@@ -1,0 +1,17 @@
+<div class="main">
+    <section class="content" flex-80>
+        <form ng-submit="addURL()">
+            <input type="text" ng-model="url" autofocus />
+        </form>
+        <br>
+        <iframe class="video" ng-src="{{video}}" frameborder="0" allowfullscreen
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+        </iframe>
+    </section>
+    <aside class="side-menu" flex-20>
+        <ul class="playlist-item" ng-repeat="song in songList track by $index">
+            <span class="song-name" ng-click="playSong($index)" title={{song.name}}>{{song.name}}</span><span
+                class="delete-song" ng-click="deleteURL($index)">&#10060</span>
+        </ul>
+    </aside>
+</div>
